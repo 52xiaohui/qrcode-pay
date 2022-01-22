@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="https://gitee.com/xh2/xh/raw/master/favicon.ico" type="image/x-icon" />
+		<title>向李庆辉付款</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<script type="text/javascript">
+			var setting = {
+				qqUrl: "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&u=3255819212&a=1&n=%E3%80%80%E3%80%80&ac=CAEQzLe_kAwYzKiyiAY%3D_xxx_sign",
+				wechatUrl: "wxp://f2f0P3nSEW7PR6sbUG8JN61RfrWk7cOMe_HNlWc9nKSZY_g",
+				aliUrl: "https://qr.alipay.com/fkx156615c2ycxf05sq30ae",
+				qrcodeApi: "https://tenapi.cn/qr/?size=6&txt="
+				// https://api.uomg.com/api/qrcode?url=
+			};
+		</script>
+
+
+		<link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_2788131_3hfc51r3wh5.css" />
+		<style type="text/css">
+			a {
+				text-decoration: none;
+			}
+
+			body {
+				background: url(https://download1.dcloud.net.cn/uploads/images/hbuilderx/hx_bg@1x.png) no-repeat;
+				background-image: url(https://download1.dcloud.net.cn/uploads/images/hbuilderx/hx_bg@1x.png);
+				background-position-x: initial;
+				background-position-y: initial;
+				background-size: 100% 749px;
+				background-repeat-x: no-repeat;
+				background-repeat-y: no-repeat;
+				background-attachment: initial;
+				background-origin: initial;
+				background-clip: initial;
+				background-color: initial;
+			}
+
+			.site-title fieldset {
+				border: none;
+				padding: 0;
+				border-top: 1px solid #eee;
+			}
+
+			.site-title fieldset legend {
+				margin-left: 20px;
+				padding: 0 10px;
+				font-size: 22px;
+				font-weight: 300;
+			}
+
+			@font-face {
+				font-family: MyFontName;
+				src: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-fdfbfc51-2a13-478a-8e62-da15701fd7bc/cc7ecf38-1f32-40fd-b493-4a90aa74258c.TTF)
+			}
+
+			.code-item {
+				width: 100%;
+				max-width: 400px;
+				margin: 0 auto;
+				padding-bottom: 1px;
+				display: none
+			}
+
+			.code-footer {
+				height: 80px;
+				line-height: 80px;
+				font-size: 20px;
+				margin: -2px 2px 2px 2px
+			}
+
+			.footer {
+				position: fixed;
+				left: 0px;
+				bottom: 0px;
+				width: 100%;
+				height: 50px;
+				z-index: 9999;
+			}
+		</style>
+	</head>
+	<body style="text-align: center;background-color: #FAFAFA;">
+		<br>
+		<div>
+
+
+			<h2 style="font-family:MyFontName;">向李庆辉付款</h2> <br>
+			<i class="layui-icon iconfont icon-qq " style="font-size: 30px;"></i>
+			<i class="layui-icon iconfont icon-weixin " style="font-size: 30px;"></i>
+			<i class="layui-icon iconfont icon-zhifubao " style="font-size: 30px;"></i>
+			<br><br>
+			<div class="code-item" id="code-all">
+				<img id="page-url"
+					src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+				<div class="code-footer" style="font-family:MyFontName;">扫描二维码向我付款</div>
+			</div>
+			<div class="code-item" id="code-qq">
+				<img id="qq-url"
+					src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+				<div class="code-footer" style="font-family:MyFontName;">长按二维码付款<br>收款人为：**辉</div>
+			</div>
+			<div class="code-item" id="code-wechat">
+				<img id="wechat-url"
+					src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+				<div class="code-footer" style="font-family:MyFontName;">长按二维码付款<br>收款人为：**雨</div>
+			</div>
+			<h3 id="hitokoto"><a id="hitokoto_text" style="text-decoration:none;">:D 获取中...</a></h3>
+		</div>
+		<br>
+		<div style="margin:80px 0;">
+			<a target="_blank" href="mailto:52xiaohuia@gmail.com" title="邮箱"><i
+					class="layui-icon iconfont icon-youxiang" style="font-size: 20px;">&ensp;</i></a>
+			<a target="_blank" href="https://tenapi.cn/qq/?qq=3255819212" title="QQ"><i
+					class="layui-icon iconfont icon-qq" style="font-size: 20px;">&ensp;</i></a>
+			<a target="_blank" href="https://github.com/52xiaohui/" title="Github"><i
+					class="layui-icon iconfont icon-github" style="font-size: 20px;">&ensp;</i></a>
+			<a target="_blank" href="https://t.me/ixiaohui" title="Telegram"><i
+					class="layui-icon iconfont icon-telegram" style="font-size: 20px;">&ensp;</i></a><br>
+			<script type="text/javascript">
+				document.write(unescape(
+					"%3Cspan id='cnzz_stat_icon_1280278910'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1280278910%26online%3D2' type='text/javascript'%3E%3C/script%3E"
+				));
+			</script>
+		</div>
+		<script>
+			fetch('https://v1.hitokoto.cn')
+				.then(response => response.json())
+				.then(data => {
+					const hitokoto = document.getElementById('hitokoto_text')
+					hitokoto.href = 'javascript:'
+					hitokoto.innerText = data.hitokoto
+				})
+				.catch(console.error)
+		</script>
+		<script>
+			var __encode = 'jsjiami.com',
+				_a = {},
+				_0xb483 = ["\x5F\x64\x65\x63\x6F\x64\x65",
+					"\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x73\x6F\x6A\x73\x6F\x6E\x2E\x63\x6F\x6D\x2F\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x6F\x62\x66\x75\x73\x63\x61\x74\x6F\x72\x2E\x68\x74\x6D\x6C"
+				];
+			(function(_0xd642x1) {
+				_0xd642x1[_0xb483[0]] = _0xb483[1]
+			})(_a);
+			var __Oxcb133 = ["\x6D\x61\x74\x63\x68", "\x75\x73\x65\x72\x41\x67\x65\x6E\x74", "\x68\x72\x65\x66",
+				"\x6C\x6F\x63\x61\x74\x69\x6F\x6E", "\x61\x6C\x69\x55\x72\x6C", "\x73\x72\x63",
+				"\x77\x65\x63\x68\x61\x74\x2D\x75\x72\x6C", "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64",
+				"\x71\x72\x63\x6F\x64\x65\x41\x70\x69", "\x77\x65\x63\x68\x61\x74\x55\x72\x6C",
+				"\x64\x69\x73\x70\x6C\x61\x79", "\x73\x74\x79\x6C\x65", "\x63\x6F\x64\x65\x2D\x77\x65\x63\x68\x61\x74",
+				"\x62\x6C\x6F\x63\x6B", "\x71\x71\x2D\x75\x72\x6C", "\x71\x71\x55\x72\x6C", "\x63\x6F\x64\x65\x2D\x71\x71",
+				"\x70\x61\x67\x65\x2D\x75\x72\x6C", "\x63\x6F\x64\x65\x2D\x61\x6C\x6C", "\x25\x32\x32",
+				"\x72\x65\x70\x6C\x61\x63\x65", "\x25\x32\x37", "\x75\x6E\x64\x65\x66\x69\x6E\x65\x64", "\x6C\x6F\x67",
+				"\u5220\u9664", "\u7248\u672C\u53F7\uFF0C\x6A\x73\u4F1A\u5B9A", "\u671F\u5F39\u7A97\uFF0C",
+				"\u8FD8\u8BF7\u652F\u6301\u6211\u4EEC\u7684\u5DE5\u4F5C", "\x6A\x73\x6A\x69\x61", "\x6D\x69\x2E\x63\x6F\x6D"
+			];
+			if (navigator[__Oxcb133[0x1]][__Oxcb133[0x0]](/Alipay/i)) {
+				window[__Oxcb133[0x3]][__Oxcb133[0x2]] = setting[__Oxcb133[0x4]]
+			} else {
+				if (navigator[__Oxcb133[0x1]][__Oxcb133[0x0]](/MicroMessenger\//i)) {
+					document[__Oxcb133[0x7]](__Oxcb133[0x6])[__Oxcb133[0x5]] = setting[__Oxcb133[0x8]] + urlEncode(setting[
+						__Oxcb133[0x9]]);
+					document[__Oxcb133[0x7]](__Oxcb133[0xc])[__Oxcb133[0xb]][__Oxcb133[0xa]] = __Oxcb133[0xd]
+				} else {
+					if (navigator[__Oxcb133[0x1]][__Oxcb133[0x0]](/QQ\//i)) {
+						document[__Oxcb133[0x7]](__Oxcb133[0xe])[__Oxcb133[0x5]] = setting[__Oxcb133[0x8]] + urlEncode(setting[
+							__Oxcb133[0xf]]);
+						document[__Oxcb133[0x7]](__Oxcb133[0x10])[__Oxcb133[0xb]][__Oxcb133[0xa]] = __Oxcb133[0xd]
+					} else {
+						document[__Oxcb133[0x7]](__Oxcb133[0x11])[__Oxcb133[0x5]] = setting[__Oxcb133[0x8]] + urlEncode(window[
+							__Oxcb133[0x3]][__Oxcb133[0x2]]);
+						document[__Oxcb133[0x7]](__Oxcb133[0x12])[__Oxcb133[0xb]][__Oxcb133[0xa]] = __Oxcb133[0xd]
+					}
+				}
+			};
+
+			function urlEncode(_0x396cx2) {
+				return encodeURIComponent(_0x396cx2)[__Oxcb133[0x14]](/'/g, __Oxcb133[0x15])[__Oxcb133[0x14]](/"/g, __Oxcb133[
+					0x13])
+			}(function(_0x396cx3, _0x396cx4, _0x396cx5, _0x396cx6, _0x396cx7, _0x396cx8) {
+				_0x396cx8 = __Oxcb133[0x16];
+				_0x396cx6 = function(_0x396cx9) {
+					if (typeof alert !== _0x396cx8) {
+						alert(_0x396cx9)
+					};
+					if (typeof console !== _0x396cx8) {
+						console[__Oxcb133[0x17]](_0x396cx9)
+					}
+				};
+				_0x396cx5 = function(_0x396cxa, _0x396cx3) {
+					return _0x396cxa + _0x396cx3
+				};
+				_0x396cx7 = _0x396cx5(__Oxcb133[0x18], _0x396cx5(_0x396cx5(__Oxcb133[0x19], __Oxcb133[0x1a]), __Oxcb133[
+					0x1b]));
+				try {
+					_0x396cx3 = __encode;
+					if (!(typeof _0x396cx3 !== _0x396cx8 && _0x396cx3 === _0x396cx5(__Oxcb133[0x1c], __Oxcb133[0x1d]))) {
+						_0x396cx6(_0x396cx7)
+					}
+				} catch (e) {
+					_0x396cx6(_0x396cx7)
+				}
+			})({})
+		</script>
+	</body>
+</html>
