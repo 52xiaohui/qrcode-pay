@@ -8,31 +8,25 @@
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <meta name="author" content="mzlogin" />
     <link rel="icon" href="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-fdfbfc51-2a13-478a-8e62-da15701fd7bc/47f162ef-d17f-486e-a389-af5960f53c47.jpg" type="image/x-icon" id="page_favionc">
-    <link href="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-fdfbfc51-2a13-478a-8e62-da15701fd7bc/e6bd71c1-2860-4c5b-83a4-42beccb0fbc1.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
     <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js" type="application/javascript">
-    </script>
-    <script src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-fdfbfc51-2a13-478a-8e62-da15701fd7bc/94dc3980-bf8a-4f6c-bdcb-3cd4929481d2.js">
     </script>
     <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/layer/3.5.1/layer.min.js" type="application/javascript">
     </script>
-    <script>//以下代码是根据浏览器UA执行事件
-      if (navigator.userAgent.match(/Alipay/i)) {
-        //支付宝
-        window.location.href = "https://qr.alipay.com/fkx156615c2ycxf05sq30ae";
-      } else if (navigator.userAgent.match(/MicroMessenger\//i)) {
-        //微信
-        var img = document.getElementById("imgid");
-        img.setAttribute("src", "https://tenapi.cn/qr/?size=6&txt=wxp://f2f0P3nSEW7PR6sbUG8JN61RfrWk7cOMe_HNlWc9nKSZY_g");
-      } else if (navigator.userAgent.match(/QQ\//i)) {
-        //QQ
-        var img = document.getElementById("imgid");
-        img.setAttribute("src", "https://tenapi.cn/qr/?size=6&txt=https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&u=3255819212&a=1&n=%E3%80%80%E3%80%80&ac=CAEQzLe_kAwYzKiyiAY%3D_xxx_sign"); //wx
-      } else {
-        layer.msg('请在QQ/微信/支付宝内打开');
-      }</script>
+<style>
+h1,h2,p,a,h3{
+moz-user-select: -moz-none;
+-moz-user-select: none;
+-o-user-select:none;
+-khtml-user-select:none;
+-webkit-user-select:none;
+-ms-user-select:none;
+user-select:none;
+}
+</style>
   </head>
   
-  <body style="    background-color: #FAFAFA">
+  <body style=" background-color: #FAFAFA">
     <div class="top-wrap" style="position: absolute; top: 1vh;width: 100%;z-index: 999">
       <div class="container">
         <div class="row" style="margin-top: 30px;">
@@ -49,17 +43,8 @@
         <h2>支持QQ、微信、支付宝</h2>
         <br />
         <center>
-          <div id="qrcode">
-          </div>
+            <img id="imgid" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-fdfbfc51-2a13-478a-8e62-da15701fd7bc/2e216580-76b3-4039-902e-860b49dc865f.png">
         </center>
-        <script type="text/javascript">var qrcode = new QRCode(document.getElementById("qrcode"), {
-            text: "https://www.hpay.tk/",
-            width: 180,
-            height: 180,
-            colorDark: "#000000",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.L
-          });</script>
       </div>
     </div>
     <div class="foot-1" style="position: absolute; bottom: 7vh;width: 100%;">
@@ -80,6 +65,21 @@
     })
     .catch(console.error)
     </script>
+        <script>//以下代码是根据浏览器UA执行事件
+      if (navigator.userAgent.match(/Alipay/i)) {
+        //支付宝
+        window.location.href = "https://qr.alipay.com/fkx156615c2ycxf05sq30ae";
+      } else if (navigator.userAgent.match(/MicroMessenger\//i)) {
+        //微信
+        var img = document.getElementById("imgid");
+        img.setAttribute("src", "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-fdfbfc51-2a13-478a-8e62-da15701fd7bc/f3bfce34-ee38-4e68-9658-6013e45efe21.png");
+      } else if (navigator.userAgent.match(/QQ\//i)) {
+        //QQ
+        var img = document.getElementById("imgid");
+        img.setAttribute("src", "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-fdfbfc51-2a13-478a-8e62-da15701fd7bc/f6721e0f-337a-4637-81ae-299341dad32d.png"); 
+      } else {
+        layer.msg('请在QQ/微信/支付宝内打开');
+      }</script>
   </body>
 
 </html>
